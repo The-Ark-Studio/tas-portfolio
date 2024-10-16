@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  tas_portfolio:
+    image: 'node:18-slim'
+    container_name: tas_portfolio
+    working_dir: /app
+    ports:
+      - 1500:3000
+    volumes:
+      - .:/app
+      - /etc/localtime:/etc/localtime:ro
+    command: sh ./start.sh
+    restart: always
+    logging:
+      driver: 'json-file'
+      options:
+        max-file: '5'
+        max-size: '25m'
