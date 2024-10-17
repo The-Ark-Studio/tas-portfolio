@@ -1,8 +1,8 @@
 'use client';
-import { TITLE_NAV } from '@/constants';
+import {TITLE_NAV} from '@/constants';
 import Link from '@mui/material/Link';
 import NextLink from 'next/link';
-import { usePathname } from 'next/navigation';
+import {usePathname} from 'next/navigation';
 import React from 'react';
 
 export const NavItems = () => {
@@ -29,7 +29,8 @@ export const NavItems = () => {
               '&:hover': {
                 color: '#F44061',
               },
-            }}>
+            }}
+          >
             {i.title}
           </Link>
         </NextLink>

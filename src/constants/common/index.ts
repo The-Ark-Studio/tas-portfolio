@@ -7,7 +7,6 @@ export class NavigationPath {
   static readonly HOME = '/';
   static readonly PROJECT = '/projects';
   static readonly TECH = '/technologies';
-  static readonly PEOPLE = '/people';
   static readonly CONTACT = '/contacts';
 }
 

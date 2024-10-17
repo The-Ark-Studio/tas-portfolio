@@ -1,19 +1,19 @@
 'use client';
 import TechWrapper from '@/components/common/TechWrapper';
-import { PROJECTS } from '@/constants/mock';
-import { IProject } from '@/types';
+import {PROJECTS} from '@/constants/mock';
+import {IProject} from '@/types';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { useParams, usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import {useParams, usePathname} from 'next/navigation';
+import {useEffect, useState} from 'react';
 
-import { CustomDivider, ImageHover } from '@/components';
+import {CustomDivider, ImageHover} from '@/components';
 import DetailButton from '@/components/common/DetailButton';
 import ImageWrapper from '@/components/common/ImageWrapper';
-import { ProjectCard } from '../components/ProjectCard';
+import {ProjectCard} from '../components/ProjectCard';
 
 const ProjectDetailPage = () => {
   const pathname = usePathname();
@@ -36,12 +36,13 @@ const ProjectDetailPage = () => {
     <Grid
       container
       p={4}
-      spacing={{ xs: 0, md: 10 }}
+      spacing={{xs: 0, md: 10}}
       sx={{
         height: '100%',
         overflow: 'auto',
-        px: { xs: '1rem', lg: '10rem' },
-      }}>
+        px: {xs: '1rem', lg: '10rem'},
+      }}
+    >
       {project && (
         <Grid container item xs={12}>
           <Grid item xs={12}>
@@ -53,7 +54,8 @@ const ProjectDetailPage = () => {
                 position: 'relative',
                 borderRadius: '10px',
               }}
-              xs={12}>
+              xs={12}
+            >
               <ImageHover
                 alt="project"
                 height={400}
@@ -69,27 +71,30 @@ const ProjectDetailPage = () => {
               <DetailButton href={project.href} text="Visit website" />
             </Grid>
             <Grid container item py={2} xs={12}>
-              <Box sx={{ color: 'white' }}>
+              <Box sx={{color: 'white'}}>
                 <Typography
                   variant="h5"
-                  sx={{ fontSize: { xs: '24px', md: '24px' } }}>
+                  sx={{fontSize: {xs: '24px', md: '24px'}}}
+                >
                   {project.clientName}
                 </Typography>
                 <Typography
                   fontWeight={'700'}
                   py={3}
-                  sx={{ fontSize: { xs: '32px', md: '48px' } }}
-                  variant="h3">
+                  sx={{fontSize: {xs: '32px', md: '48px'}}}
+                  variant="h3"
+                >
                   {project.projectName}
                 </Typography>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap' }} py={1}>
+                <Box sx={{display: 'flex', flexWrap: 'wrap'}} py={1}>
                   {project.tags.map((ele) => {
                     return (
-                      <Box key={ele} sx={{ marginRight: '1rem' }}>
+                      <Box key={ele} sx={{marginRight: '1rem'}}>
                         <Typography
                           className={'link-hover'}
                           fontWeight={'700'}
-                          variant="subtitle1">
+                          variant="subtitle1"
+                        >
                           #{ele}
                         </Typography>
                       </Box>
@@ -98,7 +103,8 @@ const ProjectDetailPage = () => {
                 </Box>
                 <Typography
                   variant="body1"
-                  sx={{ fontSize: { xs: '14px', md: '1rem' } }}>
+                  sx={{fontSize: {xs: '14px', md: '1rem'}}}
+                >
                   {project.description}
                 </Typography>
               </Box>
@@ -115,9 +121,10 @@ const ProjectDetailPage = () => {
                 display: 'flex',
                 flexFlow: 'column',
               }}
-              xs={12}>
+              xs={12}
+            >
               <CustomDivider title="Results" />
-              <Box sx={{ marginX: 'auto' }}>
+              <Box sx={{marginX: 'auto'}}>
                 <ImageWrapper stack={project.images} />
               </Box>
               <Box
@@ -127,10 +134,12 @@ const ProjectDetailPage = () => {
                   display: 'flex',
                   flexFlow: 'column',
                   alignItems: 'center',
-                }}>
+                }}
+              >
                 <Typography
                   variant="h6"
-                  sx={{ fontSize: { xs: '16px', md: '20px' } }}>
+                  sx={{fontSize: {xs: '16px', md: '20px'}}}
+                >
                   Like our work? Let us hear your ideas
                 </Typography>
                 <Button
@@ -146,8 +155,9 @@ const ProjectDetailPage = () => {
                     '&:hover': {
                       backgroundColor: '#911A3A',
                     },
-                  }}>
-                  <Typography sx={{ mr: 1, fontWeight: 600 }}>
+                  }}
+                >
+                  <Typography sx={{mr: 1, fontWeight: 600}}>
                     Create your project
                   </Typography>
                 </Button>
@@ -162,7 +172,8 @@ const ProjectDetailPage = () => {
                   width: '100%',
                   display: 'flex',
                   justifyContent: 'space-between',
-                }}>
+                }}
+              >
                 {PROJECTS.map((p) => {
                   if (project.refersId?.includes(p.id)) {
                     return <ProjectCard key={p.id} item={p} />;

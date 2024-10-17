@@ -1,4 +1,4 @@
-import { ProjectPage } from '@/screens';
+import {ProjectPage} from '@/screens';
 
 const IndexPage = () => {
   return <ProjectPage />;

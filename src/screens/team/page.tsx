@@ -1,7 +1,7 @@
 import Thumbnail from '@/assets/images/team/thumbnail.png';
-import { CustomDivider, ImageHover } from '@/components';
-import { DESCRIPTION, MEMBER } from '@/constants/people';
-import { Box, Typography } from '@mui/material';
+import {CustomDivider, ImageHover} from '@/components';
+import {DESCRIPTION, MEMBER} from '@/constants/people';
+import {Box, Typography} from '@mui/material';
 
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
@@ -22,8 +22,9 @@ const OurTeamPage = () => {
         height: '100%',
         overflow: 'auto',
         backgroundColor: '#101B25',
-        px: { xs: '1rem', lg: '10rem' },
-      }}>
+        px: {xs: '1rem', lg: '10rem'},
+      }}
+    >
       <Grid item xs={12}>
         <Grid
           container
@@ -32,7 +33,8 @@ const OurTeamPage = () => {
             overflow: 'hidden',
             mb: '3rem',
           }}
-          xs={12}>
+          xs={12}
+        >
           <Grid
             container
             item
@@ -40,26 +42,29 @@ const OurTeamPage = () => {
               overflow: 'hidden',
               borderRadius: '2rem',
             }}
-            xs={12}>
+            xs={12}
+          >
             <ImageHover
               alt="our-team"
               height={3000}
               width={3000}
-              overrideStyles={{ height: '25rem', width: '100%' }}
+              overrideStyles={{height: '25rem', width: '100%'}}
               imgSrc={Thumbnail}
             />
           </Grid>
           <Grid item xs={12}>
             <Typography
-              fontSize={{ xs: '24px', lg: '36px' }}
+              fontSize={{xs: '24px', lg: '36px'}}
               fontWeight="600"
               lineHeight="3em"
-              variant="h4">
+              variant="h4"
+            >
               {CONTENT_THUMBNAIL.title}
             </Typography>
             <Typography
-              fontSize={{ xs: '14px', lg: '18px', whiteSpace: 'pre-wrap' }}
-              variant="subtitle1">
+              fontSize={{xs: '14px', lg: '18px', whiteSpace: 'pre-wrap'}}
+              variant="subtitle1"
+            >
               {CONTENT_THUMBNAIL.content}
             </Typography>
           </Grid>
@@ -71,13 +76,14 @@ const OurTeamPage = () => {
               return (
                 <Box
                   key={item.id}
-                  mb={{ xs: 4, lg: 8 }}
+                  mb={{xs: 4, lg: 8}}
                   sx={{
-                    display: { xs: 'block', lg: 'flex' },
+                    display: {xs: 'block', lg: 'flex'},
                     flexDirection: index % 2 && 'row-reverse',
                     width: '100%',
-                  }}>
-                  <Box sx={{ width: { xs: '100%', lg: '50%' } }}>
+                  }}
+                >
+                  <Box sx={{width: {xs: '100%', lg: '50%'}}}>
                     <Grid
                       container
                       item
@@ -85,7 +91,8 @@ const OurTeamPage = () => {
                         overflow: 'hidden',
                         borderRadius: '2rem',
                         mb: '1rem',
-                      }}>
+                      }}
+                    >
                       <ImageHover
                         alt="people"
                         height={700}
@@ -101,21 +108,24 @@ const OurTeamPage = () => {
                   </Box>
                   <Box
                     sx={{
-                      width: { xs: '100%', lg: '50%' },
+                      width: {xs: '100%', lg: '50%'},
                       my: 'auto',
-                      pl: { lg: index % 2 ? '0' : '5em' },
-                      pr: { lg: index % 2 ? '5em' : '0' },
-                    }}>
+                      pl: {lg: index % 2 ? '0' : '5em'},
+                      pr: {lg: index % 2 ? '5em' : '0'},
+                    }}
+                  >
                     <Typography
-                      fontSize={{ xs: '24px', lg: '36px' }}
+                      fontSize={{xs: '24px', lg: '36px'}}
                       fontWeight="600"
                       lineHeight="2em"
-                      variant="h4">
+                      variant="h4"
+                    >
                       {item.title}
                     </Typography>
                     <Typography
-                      fontSize={{ xs: '14px', lg: '18px' }}
-                      variant="subtitle1">
+                      fontSize={{xs: '14px', lg: '18px'}}
+                      variant="subtitle1"
+                    >
                       {item.content}
                     </Typography>
                   </Box>
@@ -123,9 +133,10 @@ const OurTeamPage = () => {
               );
             })}
             <Typography
-              fontSize={{ xs: '14px', lg: '24px' }}
-              sx={{ fontStyle: 'italic' }}
-              variant="h1">
+              fontSize={{xs: '14px', lg: '24px'}}
+              sx={{fontStyle: 'italic'}}
+              variant="h1"
+            >
               Join us at The Ark Studio, where together, we are one—and
               together, we are unstoppable.
             </Typography>
@@ -137,7 +148,7 @@ const OurTeamPage = () => {
             {MEMBER.map((item) => {
               return (
                 <Grid key={item.id} item xs={6} lg={4} py={2}>
-                  <Box sx={{ textAlign: 'center' }}>
+                  <Box sx={{textAlign: 'center'}}>
                     <Image
                       alt="member"
                       src={item.img}
@@ -148,15 +159,17 @@ const OurTeamPage = () => {
                       }}
                     />
                     <Typography
-                      py={{ xs: 1, lg: 2 }}
+                      py={{xs: 1, lg: 2}}
                       fontWeight="600"
                       variant="h5"
-                      fontSize={{ xs: '16px', lg: '24px' }}>
+                      fontSize={{xs: '16px', lg: '24px'}}
+                    >
                       {item.name}
                     </Typography>
                     <Typography
                       variant="subtitle1"
-                      fontSize={{ xs: '14px', lg: '16px' }}>
+                      fontSize={{xs: '14px', lg: '16px'}}
+                    >
                       {item.position}
                     </Typography>
                   </Box>

@@ -1,6 +1,6 @@
 import LoadingScreen from '@/components/common/LoadingScreen';
-import { ProjectDetailPage } from '@/screens';
-import { Suspense } from 'react';
+import {ProjectDetailPage} from '@/screens';
+import {Suspense} from 'react';
 
 const IndexPage = () => {
   return (

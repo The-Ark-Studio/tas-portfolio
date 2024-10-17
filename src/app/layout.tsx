@@ -1,16 +1,18 @@
 import MainLayout from '@/components/layout/MainLayout';
 import theme from '@/theme';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import {AppRouterCacheProvider} from '@mui/material-nextjs/v13-appRouter';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/material/styles';
+import {ThemeProvider} from '@mui/material/styles';
 
-import type { Metadata } from 'next';
+import type {Metadata} from 'next';
 
-import { headers } from 'next/headers';
+import {headers} from 'next/headers';
 
-import { Be_Vietnam_Pro } from 'next/font/google';
+import {Be_Vietnam_Pro} from 'next/font/google';
 import './globals.css';
+
+// import icon from './favicon.ico';
 
 const beVNPro = Be_Vietnam_Pro({
   display: 'swap',
@@ -33,6 +35,11 @@ export default function RootLayout({
     headersList.get('cookie')?.includes('isMobile=true') ?? false;
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="icon" type="image/png" href="favicon.ico" />
+      </head>
+
       <body className={beVNPro.className}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
