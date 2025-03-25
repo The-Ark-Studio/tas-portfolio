@@ -1,6 +1,6 @@
 import Thumbnail from '@/assets/images/team/thumbnail.png';
 import { CustomDivider, ImageHover } from '@/components';
-import { DESCRIPTION, MEMBER } from '@/constants/people';
+import { DESCRIPTION } from '@/constants/people';
 import { Box, Typography } from '@mui/material';
 
 import Grid from '@mui/material/Grid';
@@ -129,40 +129,6 @@ const OurTeamPage = () => {
               Join us at The Ark Studio, where together, we are one—and
               together, we are unstoppable.
             </Typography>
-          </Grid>
-        </Grid>
-        <Grid container item xs={12} mt={2}>
-          <CustomDivider title={'Meet the team'} />
-          <Grid container item py={2} mb={8}>
-            {MEMBER.map((item) => {
-              return (
-                <Grid key={item.id} item xs={6} lg={4} py={2}>
-                  <Box sx={{ textAlign: 'center' }}>
-                    <Image
-                      alt="member"
-                      src={item.img}
-                      style={{
-                        objectFit: 'contain',
-                        width: '80%',
-                        height: '100%',
-                      }}
-                    />
-                    <Typography
-                      py={{ xs: 1, lg: 2 }}
-                      fontWeight="600"
-                      variant="h5"
-                      fontSize={{ xs: '16px', lg: '24px' }}>
-                      {item.name}
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      fontSize={{ xs: '14px', lg: '16px' }}>
-                      {item.position}
-                    </Typography>
-                  </Box>
-                </Grid>
-              );
-            })}
           </Grid>
         </Grid>
       </Grid>
